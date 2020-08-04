@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 # import pymysql
 # pymysql.install_as_MySQLdb()
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '!09bm96vmtbjt4)sj*i_j90^771i%mvj$g18c*i@-o531p_$*p')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -48,8 +49,6 @@ INSTALLED_APPS = [
     #installed app
     'rest_framework',
 
-    #for heroku
-    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 
